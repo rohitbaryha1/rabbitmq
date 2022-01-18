@@ -36,7 +36,9 @@ jobs:
         client-auth-token: CHANGEME321! # optional
     - name: Setting FQDN address
       run: |
-        RUNNER_ALLOW_RUNASROOT="1" echo "54.172.118.108 fortify.cyberxdemo.com" >> /etc/hosts
+        export RUNNER_ALLOW_RUNASROOT="1" 
+        export AGENT_ALLOW_RUNASROOT="1" 
+        sudo echo "54.172.118.108 fortify.cyberxdemo.com" >> /etc/hosts
         # AGENT_ALLOW_RUNASROOT="1" 
         # sudo echo IP fqdn >/etc/hosts
         #chmod +x ./scripts/moveFiles.sh
