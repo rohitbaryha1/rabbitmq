@@ -38,7 +38,8 @@ jobs:
       run: |
         export RUNNER_ALLOW_RUNASROOT="1" 
         export AGENT_ALLOW_RUNASROOT="1" 
-        sudo echo "54.172.118.108 fortify.cyberxdemo.com" >> /etc/hosts
+        # sudo echo "54.172.118.108 fortify.cyberxdemo.com" >> /etc/hosts
+        sudo echo "54.172.118.108 fortify.cyberxdemo.com" | sudo tee -a /etc/hosts
         # AGENT_ALLOW_RUNASROOT="1" 
         # sudo echo IP fqdn >/etc/hosts
         #chmod +x ./scripts/moveFiles.sh
